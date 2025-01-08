@@ -1,6 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        svg {
+            width: 16px !important;
+            height: 16px !important;
+        }
+
+        .pagination .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pagination .hidden {
+            display: none;
+        }
+
+        .pagination .relative {
+            position: relative;
+        }
+
+        .pagination .inline-flex {
+            display: inline-flex;
+        }
+    </style>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
