@@ -8,7 +8,7 @@ use Tests\TestCase;
 
 class CompanyControllerTest extends TestCase
 {
-    use RefreshDatabase; // Membersihkan database setelah setiap test
+    // use RefreshDatabase; // Membersihkan database setelah setiap test
 
     /**
      * Test index page shows companies.
@@ -35,7 +35,7 @@ class CompanyControllerTest extends TestCase
         $data = [
             'name' => 'Test Company',
             'email' => 'test@example.com',
-            'logo' => 'logo.png',
+            'logo' => \Illuminate\Http\UploadedFile::fake()->image('logo.png'),
             'website' => 'https://example.com',
         ];
 
@@ -59,7 +59,7 @@ class CompanyControllerTest extends TestCase
         $updatedData = [
             'name' => 'Updated Company',
             'email' => 'updated@example.com',
-            'logo' => 'updated_logo.png',
+            'logo' => \Illuminate\Http\UploadedFile::fake()->image('logo.png'),
             'website' => 'https://updated.com',
         ];
 
