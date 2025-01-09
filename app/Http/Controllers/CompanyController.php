@@ -39,6 +39,7 @@ class CompanyController extends Controller
 
         $company->save();
 
+        session()->flash('success', 'Company created successfully.');
         return redirect()->route('companies.index');
     }
 
@@ -70,6 +71,7 @@ class CompanyController extends Controller
 
         $company->save();
 
+        session()->flash('success', 'Company updated successfully.');
         return redirect()->route('companies.index');
     }
 
@@ -81,6 +83,7 @@ class CompanyController extends Controller
 
         $company->delete();
 
+        session()->flash('success', 'Company deleted successfully.');
         return redirect()->route('companies.index');
     }
 

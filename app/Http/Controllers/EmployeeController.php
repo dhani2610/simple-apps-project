@@ -31,6 +31,8 @@ class EmployeeController extends Controller
 
         Employee::create($validated);
 
+        session()->flash('success', 'Employee created successfully.');
+
         return redirect()->route('employees.index');
     }
 
@@ -52,13 +54,14 @@ class EmployeeController extends Controller
 
         $employee->update($validated);
 
+        session()->flash('success', 'Employee updated successfully.');
         return redirect()->route('employees.index');
     }
 
     public function destroy(Employee $employee)
     {
         $employee->delete();
-
+        session()->flash('success', 'Employee deleted successfully.');
         return redirect()->route('employees.index');
     }
 }

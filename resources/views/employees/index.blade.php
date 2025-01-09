@@ -34,6 +34,11 @@
                     <div class="card-header">{{ __('Employees') }}</div>
 
                     <div class="card-body">
+                        @if(session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <a href="{{ route('employees.create') }}" class="btn btn-primary float-end">Create New Employee</a>
 
                         <table class="table table-striped">
