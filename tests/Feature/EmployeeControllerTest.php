@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class EmployeeControllerTest extends TestCase
 {
-    // use RefreshDatabase; // Membersihkan database setelah setiap test
+    use RefreshDatabase; // Membersihkan database setelah setiap test
 
     /**
      * Test index page shows employees.
